@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 02:30:28 by aoutifra          #+#    #+#             */
-/*   Updated: 2023/09/21 02:03:55 by aoutifra         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:33:11 by aoutifra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef Contact_H
 #define Contact_H
 #include <iostream>
+#include <iomanip>
 
 #define Log(x) std::cout << "-->" << x << std::endl;
+#define Logx(x) std::cout << x;
 
 class Contact 
 {
@@ -26,9 +28,10 @@ class Contact
 public:
     void print_contact();
     void add_contact();
+    void print_view(int i);
     Contact();
     ~Contact();
 };
-
+std::string getstr(std::string s,int i);
 
 #endif // Contact_H 

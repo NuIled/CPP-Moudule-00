@@ -6,21 +6,20 @@
 #    By: aoutifra <aoutifra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 02:06:32 by aoutifra          #+#    #+#              #
-#    Updated: 2023/10/19 09:19:01 by aoutifra         ###   ########.fr        #
+#    Updated: 2023/10/06 05:07:07 by aoutifra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = PhoneBook
+NAME = Account
 
-SRC = PhoneBook.cpp Contact.cpp
+SRC = Account.cpp tests.cpp
 
 Obj = $(SRC:.cpp=.o)
 
 FLAGS= -Wall -Wextra -Werror 
 
-HEADER1 = PhoneBook.hpp 
-HEADER2 = Contact.hpp
+HEADER = Account.hpp
 
 CC = c++
 
@@ -29,7 +28,7 @@ all : $(NAME)
 $(NAME): $(Obj)
 	$(CC) $(FLAGS) $(Obj) -o $(NAME)  
 
-%.o: %.cpp $(HEADER1) $(HEADER2)
+%.o: %.cpp $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@
 
 re:fclean all
